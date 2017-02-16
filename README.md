@@ -17,10 +17,9 @@ You'll need Docker and Docker Compose. The easiest way to get these is:
 ## Getting Started
 
 1. Register for a free Datomic Pro Starter Edition license at [my.datomic.com](https://my.datomic.com/account/create)
-2. Edit the `.credentials` files in *both* the **datomic-console** and **datomic-pro-starter** folders file adding your Datomic portal username and download key (sorry, but Docker doesn't support symlinking)
-3. Add your Datomic Pro Starter Edition license key to the `datomic-pro-starter/config/dev-transactor.properties` file
-4. Run `docker-compose up`
-5. The console will be available on port 9000 of your docker host's
+2. run `./setup-creds.sh username download-key license`, eg `setup-creds foo@foo.com key-key-key license-123-123-//##`
+3. Run `docker-compose up`
+4. The console will be available on port 9000 of your docker host's
    address. If you use Docker for (Win|Mac), it's just `localhost`. Ohterwise, use `echo $DOCKER_HOST` or `docker-machine env <local-docker-machine-vm-name>`to see what that is. E.g. [http://192.168.59.103:9000/browse](http://192.168.59.103:9000/browse)
 
 ##  Obligatory Word of Caution
