@@ -15,4 +15,4 @@ for x in datomic-console datomic-pro-starter; do
     echo $CRED > $DEST
 done
 
-sed -i '' -e "s/license-key=.*/license-key=$3/g" datomic-pro-starter/config/dev-transactor.properties
+sed -i '' -e "s#license-key=.*#license-key=$3#g" datomic-pro-starter/config/dev-transactor.properties
